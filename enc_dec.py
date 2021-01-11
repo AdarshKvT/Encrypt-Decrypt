@@ -5,7 +5,6 @@ nums = "0123456789"
 
 sym = "!#$%&()*+"
 
-dec_list = []
 
 
 while True:
