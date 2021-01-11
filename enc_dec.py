@@ -5,12 +5,13 @@ nums = "0123456789"
 
 sym = "!#$%&()*+"
 
-enc_list = []
-
 dec_list = []
 
 
 while True:
+	enc_list = []
+	dec_list = []
+	
 	cmds = input("Encrypt a word(enc) Decrypt a word(dec) Quit(q):\n>>").lower()
 
 	if cmds == "enc":
@@ -38,9 +39,9 @@ while True:
 				final = nums[index]
 				
 			elif letter in sym:
-				index = sym.index(letter)+key
-				if index >= 26:
-					index -= 26
+				index2 = sym.index(letter)+key
+				if index2 >= 26:
+					index2 -= 26
 				
 				final = sym[index]
 				
@@ -62,7 +63,7 @@ while True:
 				index = alpha_up.index(letter)-key
 				final = alpha_up[index]
 				
-			elif letter in nums:
+			elif letters in nums:
 				index = nums.index(letter)-key
 				final = nums[index]
 				
@@ -90,6 +91,3 @@ while True:
 		
 
   
-
-	
-	
